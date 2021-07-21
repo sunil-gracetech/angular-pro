@@ -1,0 +1,75 @@
+<div class="container">
+<div *ngIf="employees; else nodata">   
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Salary</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <!-- <td>{{emp.gender|genderformat}}</td> -->
+            <td>
+                <div [ngSwitch]="emp.gender">
+                    <label *ngSwitchCase="1">Male</label>
+                    <label *ngSwitchCase="0">Female</label>
+                    <label *ngSwitchDefault>Unknwon</label>                  
+                </div>
+            </td>
+            <td>{{emp.dob|date}}</td>
+            <td>{{emp.salary|currency}}</td>
+
+        </tr>
+    </tbody>  
+</table>
+</div> 
+<ng-template #nodata>
+<h5>Employee has no records !</h5>
+</ng-template>
+</div>
+
+
+
+
+
+<!-- 
+<input type="text" placeholder="Your Message" [(ngModel)]="message">
+<h3>Message :{{message}}</h3>
+<ul>
+    <li *ngFor="let cc of courses">{{cc}}</li>
+</ul>
+<hr>
+<button (click)="Counter()" class="btn btn-info">Hit Counter</button>
+<p>Count: {{count}}</p>
+<hr>
+
+<p [ngClass]="count>=5?cls1:cls2">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt temporibus itaque unde alias eos molestiae quam eligendi dolore! Sapiente cumque iusto quasi deleniti sit assumenda dolore aliquid eius obcaecati dicta.
+</p>
+
+<p [ngClass]="count>=5?['text-success','bg-info']:['text-danger','bg-success']">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt temporibus itaque unde alias eos molestiae quam eligendi dolore! Sapiente cumque iusto quasi deleniti sit assumenda dolore aliquid eius obcaecati dicta.
+</p>
+
+
+
+<p [class.text-danger]="count>=5">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt temporibus itaque unde alias eos molestiae quam eligendi dolore! Sapiente cumque iusto quasi deleniti sit assumenda dolore aliquid eius obcaecati dicta.
+</p>
+
+
+<p [ngStyle]="count>=5?css1:css2">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt temporibus itaque unde alias eos molestiae quam eligendi dolore! Sapiente cumque iusto quasi deleniti sit assumenda dolore aliquid eius obcaecati dicta.
+</p>
+ -->
+<!-- 
+<p [style.color]="count>=5?'green':'red'">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt temporibus itaque unde alias eos molestiae quam eligendi dolore! Sapiente cumque iusto quasi deleniti sit assumenda dolore aliquid eius obcaecati dicta.
+</p>
+ -->
