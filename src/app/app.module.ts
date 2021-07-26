@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from './components/header/header.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GenderformatPipe } from './tools/pipes/genderformat.pipe';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -39,7 +39,8 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

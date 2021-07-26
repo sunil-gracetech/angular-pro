@@ -1,0 +1,10 @@
+.card{
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+.form-control{
+    border-radius: 1px !important;
+}
+.form-group{
+    margin-bottom: 10px;;
+}

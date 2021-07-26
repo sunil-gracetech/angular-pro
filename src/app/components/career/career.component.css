@@ -1,0 +1,13 @@
+.row{
+    margin-bottom: 10px;
+}
+.form-control{
+    padding: 11px !important;
+    border-radius: 1px !important;
+}
+.error-control input{
+    border-color: red;
+}
+.success-control input{
+    border-color: green;
+}

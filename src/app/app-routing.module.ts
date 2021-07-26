@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CareerComponent } from './components/career/career.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ConsultingComponent } from './components/servicepage/consulting/consulting.component';
 import { DevelopmentComponent } from './components/servicepage/development/development.component';
@@ -25,7 +26,12 @@ children:[
 
 },
   {path:'about', component:AboutComponent},
-  {path:'products', component:ProductsComponent},
+  {path:'products', component:ProductsComponent,
+children:[
+  {path:'',component:ProductlistComponent},
+  {path:'productlist/:id', component:ProductlistComponent}
+]
+},
   {path:'career', component:CareerComponent},
   {path:'contact', component:ContactComponent}
 ];
