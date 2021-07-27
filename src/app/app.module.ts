@@ -18,6 +18,7 @@ import { ConsultingComponent } from './components/servicepage/consulting/consult
 import { ResultwritingComponent } from './components/servicepage/resultwriting/resultwriting.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductlistComponent } from './components/productlist/productlist.component'
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

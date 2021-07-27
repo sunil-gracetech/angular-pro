@@ -1,0 +1,9 @@
+{
+    "employees":[
+        {"id":1,"name":"adiyta","dob":"1998-03-02","gender":1,"salary":12000},
+        {"id":2,"name":"Mohit","dob":"1998-03-02","gender":1,"salary":12000},
+        {"id":3,"name":"Sumitra","dob":"1992-07-02","gender":0,"salary":16000},
+        {"id":4,"name":"Rachita","dob":"1991-02-09","gender":0,"salary":15000},
+        {"id":5,"name":"Kalpana","dob":"1995-05-01","gender":0,"salary":19000}
+      ]
+}

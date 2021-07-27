@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ContactModel } from 'src/app/models/contact';
 
 @Component({
@@ -9,7 +10,10 @@ import { ContactModel } from 'src/app/models/contact';
 export class ContactComponent implements OnInit {
 
 contact:ContactModel
-  constructor() { }
+  constructor(private _title:Title, private _met:Meta) { 
+    this._title.setTitle("Contact-us")
+    this._met.addTag({name:"contact us",description:"this is the contact page for us"})
+  }
 
   ngOnInit(): void {
     this.resetForm()
