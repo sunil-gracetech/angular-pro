@@ -19,7 +19,10 @@ import { ResultwritingComponent } from './components/servicepage/resultwriting/r
 import { ProductsComponent } from './components/products/products.component';
 import { ProductlistComponent } from './components/productlist/productlist.component'
 import {HttpClientModule} from '@angular/common/http'
-@NgModule({
+import { ToastrModule } from 'ngx-toastr';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';@NgModule({
+
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -42,7 +45,10 @@ import {HttpClientModule} from '@angular/common/http'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

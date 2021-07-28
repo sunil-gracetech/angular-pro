@@ -1,0 +1,15 @@
+.card{
+    padding: 15px;
+    background: rgba(100, 150, 50, 0.5);
+}
+.form-group{
+    margin-bottom: 7px !important;
+}
+.fa{
+    padding: 10px;
+    font-size: 20px;
+}
+.fa-trash{
+    margin-left: 10px;
+    color: red;
+}

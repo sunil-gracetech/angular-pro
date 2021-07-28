@@ -13,10 +13,10 @@ export class EmployeeService implements IEmployee {
     return this.http.get(`${BaseUrl}${Endpint}`)
   }
   CreateEmployee(emp: any) {
-    throw new Error('Method not implemented.');
+  return this.http.post(`${BaseUrl}${Endpint}`,emp)
   }
   DeleteEmployee(id: number) {
-    throw new Error('Method not implemented.');
+    return this.http.delete(`${BaseUrl}${Endpint}/${id}`);
   }
   UpdateEmployee(emp: any) {
     throw new Error('Method not implemented.');
