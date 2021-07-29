@@ -1,0 +1,6 @@
+<h4>Welcome to Parent</h4>
+<input type="text" [(ngModel)]="message">
+<app-childcom [messageReciver]="message" (messageSender)="messageReciever2($event)"></app-childcom>
+<p>
+    Message from child : {{fromParent}}
+</p>

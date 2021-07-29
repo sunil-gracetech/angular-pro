@@ -21,7 +21,9 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
 import {HttpClientModule} from '@angular/common/http'
 import { ToastrModule } from 'ngx-toastr';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';@NgModule({
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParentcomComponent } from './components/parentcom/parentcom.component';
+import { ChildcomComponent } from './components/childcom/childcom.component';@NgModule({
 
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';@
     ConsultingComponent,
     ResultwritingComponent,
     ProductsComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    ParentcomComponent,
+    ChildcomComponent
   ],
   imports: [
     BrowserModule,

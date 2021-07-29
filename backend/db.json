@@ -8,11 +8,11 @@
       "salary": 12000
     },
     {
-      "id": 2,
-      "name": "Mohit",
-      "dob": "1998-03-02",
+      "name": "Mohit verma",
       "gender": 1,
-      "salary": 12000
+      "dob": "1998-03-02",
+      "salary": "19000",
+      "id": 2
     },
     {
       "id": 3,

@@ -42,13 +42,28 @@ modalRef:BsModalRef
     })
   }
   submit(){
-  // console.log(this.employee.value)
+   console.log(this.employee.value)
+
+      if(this.employee.value.id=="")
+      {
     this._employeeService.CreateEmployee(this.employee.value).subscribe(e=>{
       console.log(e)
       this._toast.success("Employee Created Successfully !","Success")
       this.employee.reset();
       this.loadEmployee()
     })
+      }
+      else{
+        const id=this.employee.value.id;
+        let emp=this.employee.value;
+        delete emp.id
+        this._employeeService.UpdateEmployee(id,emp).subscribe(e=>{
+          console.log(e)
+          this._toast.success("Employee Updated Successfully !","Success")
+          this.employee.reset();
+          this.loadEmployee()
+        })
+      }
   }
 
   DeleteEmployee(id){

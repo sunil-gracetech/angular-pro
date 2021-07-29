@@ -18,8 +18,8 @@ export class EmployeeService implements IEmployee {
   DeleteEmployee(id: number) {
     return this.http.delete(`${BaseUrl}${Endpint}/${id}`);
   }
-  UpdateEmployee(emp: any) {
-    throw new Error('Method not implemented.');
+  UpdateEmployee(id:number,emp: any) {
+    return this.http.put(`${BaseUrl}${Endpint}/${id}`,emp);
   }
 
 }
