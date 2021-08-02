@@ -23,7 +23,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParentcomComponent } from './components/parentcom/parentcom.component';
-import { ChildcomComponent } from './components/childcom/childcom.component';@NgModule({
+import { ChildcomComponent } from './components/childcom/childcom.component';import { CustomerModuleModule } from './customer-module/customer-module.module';
+@NgModule({
 
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { ChildcomComponent } from './components/childcom/childcom.component';@Ng
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CustomerModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

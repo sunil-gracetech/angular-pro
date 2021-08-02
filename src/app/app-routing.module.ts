@@ -35,7 +35,9 @@ children:[
 },
   {path:'career', component:CareerComponent},
   {path:'parent-com', component:ParentcomComponent},
-  {path:'contact', component:ContactComponent}
+  {path:'contact', component:ContactComponent},
+  {path:'login',loadChildren:"./customer-module/customer-module.module#CustomerModuleModule"},
+  {path:'signup',loadChildren:"./customer-module/customer-module.module#CustomerModuleModule"}
 ];
 
 @NgModule({
